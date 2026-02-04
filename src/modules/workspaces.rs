@@ -390,7 +390,7 @@ impl Workspaces {
                             }
                             WorkspaceVisibilityMode::MonitorSpecificExclusive => monitor_name
                                 .unwrap_or_else(|| &w.monitor)
-                                .contains(&w.monitor),
+                                .contains(&format!("({})", &w.monitor)),
                         };
 
                         if show {
